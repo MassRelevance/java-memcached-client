@@ -65,3 +65,18 @@ contains the latest Spymemcached source.
 At [couchbase.org](http://www.couchbase.org/code/couchbase/java) you
 can find a download's section for the latest release as well as an
 extensive tutorial to help new users learn how to use Spymemcached.
+
+# Keeping up-to-date
+The repo this is forked from no longer keeps java-memcached-client up-to-date.  Now, the repo
+is maintained by couchbase under the name spymemcached.  To keep up to date, do the following
+
+```bash
+git clone git@github.com:spredfast/java-memcached-client.git
+cd java-memcached-client
+git remote add upstream git@github.com:couchbase/spymemcached.git
+git fetch
+git rebase upstream/master
+git pull origin master
+git push origin master
+```
+
